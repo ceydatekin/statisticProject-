@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        .main {
+            background: linear-gradient(to right, #4a3e80, #C5CAE9);
+        }
+        
+        .foto {
+            width: 350px;
+            height: 250px;
+        }
+        
+        .std {
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid #EDE7F6;
+            width: 180px;
+        }
+        
+        .std h1,
+        p {
+            color: #EDE7F6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="{{ url_for('static', filename='img/8454.png') }}" class="foto" alt="">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="{{ url_for('static', filename='img/statistics.png') }}" alt="">
+                    <div>
+                        <form action="/stdhesapla" method="post">
+                            <button type="submit" class="std">
+                            <h1>Calculate</h1>
+                            <p>Standard Deviation, <br> Mean, Median, Mode</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="{{ url_for('static', filename='img/stats.png') }}" alt="">
+                    <div>
+                        <form action="/ahhesapla" method="post">
+                            <button type="submit" class="std">
+                            <h1>Calculate</h1>
+                            <p>Geometric Mean, <br>Harmonic Mean</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="{{ url_for('static', filename='img/line-graph.png') }}" alt="">
+                    <div>
+                        <form action="ghesapla" method="post">
+                            <button type="submit" class="std">
+                            <h1>Calculate</h1>
+                            <p> Graphic</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="{{ url_for('static', filename='img/analytics.png') }}" alt="">
+                    <div>
+                        <form action="yhesapla" method="post">
+                            <button type="submit" class="std">
+                            <h1>Calculate</h1>
+                            <p>Count, Sum, Maks, Min</p>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="controls">
+            <p class="pbtn1">
+                <img src="{{ url_for('static', filename='img/arrow.png') }}" id="upbtn" alt="">
+            </p>
+            <h3>Seç</h3>
+            <p class="pbtn2">
+                <img src="{{ url_for('static', filename='img/arrow.png') }}" id="downbtn" alt="">
+            </p>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/ist.js') }}"></script>
+
+</body>
+
+</html>

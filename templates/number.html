@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        .main {
+            background: linear-gradient(to right, #4a3e80, #C5CAE9);
+        }
+        
+        .foto {
+            width: 350px;
+            height: 250px;
+        }
+        
+        .std {
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid #EDE7F6;
+        }
+        
+        .std h1,
+        p {
+            color: #EDE7F6;
+        }
+        
+        .input {
+            background-color: transparent;
+            padding: 10px;
+        }
+        
+        .text {
+            position: relative;
+        }
+        
+        .text1 {
+            padding: 10px;
+        }
+        
+        #buton {
+            position: relative;
+            left: 130px;
+            border-radius: 10px;
+            height: 35px;
+            width: 70px;
+            background-color: #EDE7F6;
+            color: blueviolet;
+        }
+        
+        .div1 {
+            position: absolute;
+            width: 300px;
+            height: 115px;
+            background-color: #3a1f61;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+            left: 400px;
+            bottom: 242px;
+        }
+        
+        .div1 p {
+            margin-left: 5px;
+        }
+        
+        .div2 p {
+            margin-left: 5px;
+        }
+        
+        .div3 p {
+            margin-left: 5px;
+        }
+        
+        .div4 p {
+            margin-left: 5px;
+        }
+        
+        .div2 {
+            position: absolute;
+            width: 300px;
+            height: 115px;
+            background-color: #3a1f61;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+            left: 400px;
+            bottom: 105px;
+        }
+        
+        .div3 {
+            position: absolute;
+            width: 300px;
+            height: 115px;
+            background-color: #3a1f61;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+            left: 400px;
+            bottom: -25px;
+        }
+        
+        .div4 {
+            position: absolute;
+            width: 300px;
+            height: 115px;
+            background-color: #3a1f61;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+            left: 400px;
+            bottom: -160px;
+        }
+        
+        .div1:hover {
+            background-color: rgba(0, 0, 1, 15);
+            width: 320px;
+            height: 120px;
+        }
+        
+        .div2:hover {
+            background-color: rgba(0, 0, 1, 15);
+            width: 320px;
+            height: 120px;
+        }
+        
+        .div3:hover {
+            background-color: rgba(0, 0, 1, 15);
+            width: 320px;
+            height: 120px;
+        }
+        
+        .div4:hover {
+            background-color: rgba(0, 0, 1, 15);
+            width: 320px;
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="{{ url_for('static', filename='img/8454.png') }}" class="foto" alt="">
+            <div id="circle">
+                <div class="feature one">
+                    <div>
+                        <form action="/stdhesapla1" method="post" class="input">
+                            <p class="text"> Data: <input type="text" class="text1" name="number1"></p>
+                            <p><button type="submit" id="buton">Submit</button></p>
+                        </form>
+                        <div class="div1">
+                            <p>Standart Deviation :</p>
+                            <p>In statistics, the standard deviation is a measure of the amount of variation or dispersion of a set of values.</p>
+                        </div>
+                        <div class="div2">
+                            <p>Mean:</p>
+                            <p>The mean is the average or the most common value in a collection of numbers.</p>
+
+                        </div>
+                        <div class="div3">
+                            <p>Median:</p>
+                            <p>Median is a statistical measure that determines the middle value of a dataset listed in ascending order.</p>
+
+                        </div>
+                        <div class="div4">
+                            <p>Mode:</p>
+                            <p>The mode is a statistical term that refers to the most frequently occurring number found in a set of numbers.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="feature two">
+
+                </div>
+                <div class="feature three">
+
+                </div>
+                <div class="feature four">
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <form action="stdhesapla">
+                <p> Verileriniz: <input type="text"></p>
+                <button type="submit"></button>
+            </form>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/ist.js') }}"></script>
+
+</body>
+
+</html>

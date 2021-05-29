@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        .main {
+            background: linear-gradient(to right, #4a3e80, #C5CAE9);
+        }
+        
+        .foto {
+            width: 350px;
+            height: 250px;
+        }
+        
+        .std {
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid #EDE7F6;
+        }
+        
+        .std h1,
+        p {
+            color: #EDE7F6;
+        }
+        
+        .div1 {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            background-color: #EDE7F6;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+        }
+        
+        .div1 p {
+            color: blueviolet;
+            margin: 10px;
+        }
+        
+        .div2 {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            right: 10px;
+            background-color: #EDE7F6;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+        }
+        
+        .div2 p {
+            color: blueviolet;
+            margin: 10px;
+        }
+        
+        .div3 {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            left: 150px;
+            background-color: #EDE7F6;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+        }
+        
+        .div3 p {
+            color: blueviolet;
+            margin: 10px;
+        }
+        
+        .div4 {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            left: 290px;
+            background-color: #EDE7F6;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+        }
+        
+        .div4 p {
+            color: blueviolet;
+            margin: 10px;
+        }
+        
+        .div5 {
+            position: absolute;
+            width: 110px;
+            height: 110px;
+            left: 290px;
+            top: 150px;
+            border-radius: 10px;
+        }
+        
+        .div5 button {
+            padding: 10px;
+            margin-top: 10px;
+            margin-left: 20px;
+            border-radius: 6px;
+            background-color: #EDE7F6;
+            color: blueviolet;
+        }
+        
+        .div5 button:hover {
+            background-color: #3a1f61;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="{{ url_for('static', filename='img/8454.png') }}" class="foto" alt="">
+            <div id="circle">
+                <div class="feature one">
+                    <div class="div1">
+                        <p>count :</p>
+                        <p> {{total1}}</p>
+                    </div>
+                    <div class="div2">
+                        <p>sum:</p>
+                        <p> {{total2}}</p>
+                    </div>
+                    <div class="div3">
+                        <p>maks:</p>
+                        <p> {{total3}}</p>
+                    </div>
+                    <div class="div4">
+                        <p>min:</p>
+                        <p> {{total4}}</p>
+                    </div>
+                    <div class="div5">
+                        <form action="/">
+                            <button type="submit">Calculator Page</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="feature two">
+
+                </div>
+                <div class="feature three">
+
+                </div>
+                <div class="feature four">
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <script src="{{ url_for('static', filename='js/ist.js') }}"></script>
+
+</body>
+
+</html>

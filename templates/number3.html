@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/index.css') }}">
+    <style>
+        .main {
+            background: linear-gradient(to right, #4a3e80, #C5CAE9);
+        }
+        
+        .foto {
+            width: 350px;
+            height: 250px;
+        }
+        
+        .std {
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid #EDE7F6;
+        }
+        
+        .div1 {
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            background-color: #3a1f61;
+            border-radius: 10px;
+            transform: perspective(1000px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 20), 0 15px 12px rgba(0, 0, 0, 15);
+            transition: all 180ms ease-out;
+            left: 400px;
+            bottom: 40px;
+        }
+        
+        .div1 p {
+            margin: 5px;
+        }
+        
+        .div1:hover {
+            background-color: rgba(0, 0, 1, 15);
+            width: 320px;
+            height: 120px;
+        }
+        
+        .std h1,
+        p {
+            color: #EDE7F6;
+        }
+        
+        .input {
+            background-color: transparent;
+            padding: 10px;
+        }
+        
+        .text {
+            position: relative;
+        }
+        
+        .text1 {
+            padding: 10px;
+        }
+        
+        #buton {
+            position: relative;
+            left: 130px;
+            border-radius: 10px;
+            height: 35px;
+            width: 70px;
+            background-color: #EDE7F6;
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="{{ url_for('static', filename='img/8454.png') }}" class="foto" alt="">
+            <div id="circle">
+                <div class="feature one">
+                    <div>
+                        <form action="/ghesapla1" method="post" class="input">
+                            <p class="text"> Data : <input type="text" class="text1" name="number1"></p>
+                            <p><button type="submit" id="buton">Submit</button></p>
+                        </form>
+                        <div class="div1">
+                            <p>Graphs:</p>
+                            <p>Number Sequence Graph</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature two">
+
+                </div>
+                <div class="feature three">
+
+                </div>
+                <div class="feature four">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="{{ url_for('static', filename='js/ist.js') }}"></script>
+
+</body>
+
+</html>
