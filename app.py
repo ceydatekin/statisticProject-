@@ -6,7 +6,7 @@ import seaborn as sns
 import base64
 from io import BytesIO
 from matplotlib.figure import Figure
-
+import statistics
 
 app = Flask(__name__)
 
@@ -36,7 +36,7 @@ def stdhesapla1():
         b = pd.DataFrame(b, columns=["df"])
         total2 = b["df"].std();
         son =  "{:.4}".format(total2)
-        return render_template("sonuc1.html", total = b["df"].mean(),total2= son,total3=b["df"].median(),total4 = b["df"].mode())
+        return render_template("sonuc1.html", total = b["df"].mean(),total2= son,total3=b["df"].median(),total4 =statistics.multimode(b["df"]))
     else:
         return redirect(url_for("index"))
 
